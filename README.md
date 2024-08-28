@@ -1,74 +1,70 @@
+# Getting Started with Create React App
 
-<!DOCTYPE html>
-<html> <!--Começo do código--> 
-<body> <!--Corpo do código (Início)-->
-    
-    <!--Este código corresponde a uma calculadora de raízes de uma expressão de segundo grau qualquer, inserida no app pelo usuário--> 
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-    <!--Formulário (Entrada dos valores dos coeficientes da equação)-->
+## Available Scripts
 
-    <form>
-        <label for = "coeficienteA"> Coeficiente A:</label>
-        <input type = "number" id = "coeficienteA" name = "coeficienteA"><br>
-        <label for = "coeficienteB"> Coeficiente B:</label>
-        <input type = "number" id = "coeficienteB" name = "coeficienteB"><br>
-        <label for = "coeficienteC"> Coeficiente C:</label>
-        <input type = "number" id = "coeficienteC" name = "coeficienteC"><br><br>
-    </form>
-    
-    <!--Inserindo Java Script dentro do Html-->
+In the project directory, you can run:
 
-    <script>
-        function calculaRaiz(){
-            let coeficienteA = parseFloat(document.getElementById("coeficienteA").value);
-            console.log("coeficienteA: "+coeficienteA);
-            let coeficienteB = parseFloat(document.getElementById("coeficienteB").value);
-            console.log("coeficienteB: "+coeficienteB);
-            let coeficienteC = parseFloat(document.getElementById("coeficienteC").value);
-            console.log("coeficienteC: "+coeficienteC);
-            
-            // Verficar se 'a' é zero
-            if (coeficienteA === 0){
-                alert('o coeficiente "a" não pode ser zero em uma expressão de segundo grau');
-                return;
-            }
+### `npm start`
 
-            // Calcular o discriminante
-            const discriminante = coeficienteB ** 2 - 4 * coeficienteA * coeficienteC;
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-            // Definindo as variáveis do resultado
-            let raiz1, raiz2, conclusao;
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-            // Verificar o discriminante para determinar as raízes
-            if (discriminante > 0){
-                raiz1 = (-coeficienteB + Math.sqrt(discriminante)) / (2 * coeficienteA);
-                raiz2 = (-coeficienteB - Math.sqrt(discriminante)) / (2 * coeficienteA);
-                conclusao = 'A equação possui duas raízes reais diferentes';
-            } else if (discriminante === 0){
-                raiz1 = raiz2 = -coeficienteB / (2 * coeficienteA);
-                conclusao = 'A equação possui uma raíz real repetida';
-            } else{
-                raiz1 = raiz2 = NaN; 
-                conclusao = 'A equação não possui raízes reais'
-            }
+### `npm test`
 
-            // Para mostrar o resultado
-            document.getElementById("raiz1").innerHTML = "Raiz 1: "+raiz1;
-            document.getElementById("raiz2").innerHTML = "Raiz 2: "+raiz2;
-            document.getElementById("conclusao").innerHTML = "Conclusão: "+conclusao
-        }
-    </script>
-    
-    <!--Botão da calculadora-->
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-    <button onclick="calculaRaiz()"> Calcular Raízes </button>
-    
-    <!--Parágrafo-->
+### `npm run build`
 
-    <p id = "raiz1">Raiz 1: </p>
-    <p id = "raiz2">Raiz 2: </p>
-    <p id = "conclusao">Conclusão: </p>
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-</body> <!--Corpo do código (Fim)-->
-</html> <!-- Fim do código-->
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
