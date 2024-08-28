@@ -3,10 +3,6 @@ import Content from './Content';
 
 
 function App() {
-  const title = 'welcome to the new blog';
-  const likes = 50
-  const link = 'www.google.com'
-  
 
   return (
     <div className="App">
